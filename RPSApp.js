@@ -33,7 +33,8 @@ ctrl.gameModel=[
     {no:7,playerChoice:'',computerChoice:'',roundWinner:''},
     {no:8,playerChoice:'',computerChoice:'',roundWinner:''},
     {no:9,playerChoice:'',computerChoice:'',roundWinner:''},
-    {no:10,playerChoice:'',computerChoice:'',roundWinner:''}
+    {no:10,playerChoice:'',computerChoice:'',roundWinner:''},
+	{no:11,playerChoice:'',computerChoice:'',roundWinner:''}
 ];
 
 ctrl.gameOptions=[
