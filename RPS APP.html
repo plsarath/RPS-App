@@ -1,0 +1,32 @@
+<html ng-app="RPSApp">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.angularjs.org/1.6.1/angular.min.js"></script>
+        <script src="RPSApp.js"></script>
+    </head>
+    <body>
+        <div ng-controller="RPSController as rCtrl">
+            <form>
+                <div class="row" ng-repeat="round in rCtrl.gameModel">
+                    <div class="col-md-3"><label>Round No: {{round.no}}</label></div>
+                    <div class="col-md-3">
+                        <select ng-model="round.playerChoice" class="form-control" ng-change="rCtrl.onPlayerChoiceSelected($index)"
+                       ng-disabled="round.playerChoice" ng-options="option.id as option.value for option in rCtrl.gameOptions">
+                        </select></div>
+                    <div class="col-md-3">
+                        <select ng-model="round.computerChoice" class="form-control" 
+                        ng-disabled="round.computerChoice" ng-options="option.id as option.value for option in rCtrl.gameOptions"></select></div>
+                    <div class="col-md-3">{{round.roundWinner}}</div>
+                </div>
+
+<div class="row">
+    <div class="alert alert-success" ng-show="rCtrl.leadingWinner">
+       <label>Leading Winner is:  {{rCtrl.leadingWinner}}</label>
+        </div>
+    </div>
+            </form>            
+
+        </div>
+
+    </body>
+</html>
